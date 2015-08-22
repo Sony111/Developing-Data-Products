@@ -27,8 +27,8 @@ shinyUI(pageWithSidebar(
                  strong("dependent variable y by independent variables x1, x2, ..., xp with error.")), 
                p("For example, in the built-in data set",strong(" mtcars")," from observations of a Motor Trend car road Tests comprises fuel 
                  consumption,automobile design and performance. First Transform the dataset (cyl,gear,am,vs as factor variables).",strong("lm")," is 
-                 ", strong("used to fit linear model")," by taking all the dependnt variables into account.Choose a",strong("model by AIC in a stepwise Algorithm"),
-                 "The obtained model has 3 (wt,qsec,am) dependent variables.") ,
+                 ", strong("used to fit linear model")," by taking all the dependent variables into account.Choose a",strong("model by AIC in a stepwise Algorithm"),
+                 "The obtained model has 3 (wt,qsec,am) independent variables.") ,
                h3("Predction Interval for MLR"),
                
                p("We now apply the predict function and set the predictor variable in the newdata argument. We also set the interval type as",
@@ -40,9 +40,15 @@ shinyUI(pageWithSidebar(
                code(textOutput("myp"))
                ),
                
-      tabPanel("Summary", verbatimTextOutput("summary")), 
-      tabPanel("Table", tableOutput("table")),
-      tabPanel("Plot" ,plotOutput("myplot"))
+      tabPanel("Summary", 
+               h2("Summary of",strong("mtcars"),"dataset"),
+               verbatimTextOutput("summary")), 
+      tabPanel("Table", 
+               h2("Generate an HTML table view of mtcars dataset"),
+               tableOutput("table")),
+      tabPanel("Diagnostic Plots" ,
+               h2("Diagnostic plots provide checks for heteroscedasticity, normality, and influential observerations."),
+               plotOutput("myplot"))
     )
   )
 ))

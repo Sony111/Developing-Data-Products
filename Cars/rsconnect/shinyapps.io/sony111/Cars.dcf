@@ -1,8 +1,8 @@
 name: Cars
 account: sony111
 server: shinyapps.io
-bundleId: 245716
+bundleId: 246746
 url: https://sony111.shinyapps.io/Cars
-when: 1440107641.53915
+when: 1440195921.92977
 asMultiple: FALSE
 asStatic: FALSE

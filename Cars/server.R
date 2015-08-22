@@ -1,5 +1,4 @@
 library(shiny)
-library(corrgram)
 
 # transforming into factor variables
 mtcars$cyl <- as.factor(mtcars$cyl)
@@ -38,13 +37,14 @@ shinyServer(function(input, output) {
   })
   
   
-  # Generate a plot 
+  # Generate diagnostic plot s
   output$myplot <- renderPlot({
     
-     corrgram(mtcars, order=NULL, lower.panel=panel.shade,
-     upper.panel=panel.pie, text.panel=panel.txt,
-     main="Car Milage Data (unsorted)")
-  })
+     # optional 4 graphs/page
+     layout(matrix(c(1,2,3,4),2,2,byrow=T))
+     plot(best_model)
+     
+    })
   we <- reactive({
     w <- as.numeric(input$Weight)
   })
