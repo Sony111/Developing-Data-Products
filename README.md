@@ -3,4 +3,4 @@ A data product is the production output from a statistical analysis. Data produc
 
  Shiny Project      : https://sony111.shinyapps.io/Cars
  
- Shiny Presentation : file:///C:/Users/ushap_000/Desktop/Coursera/09.Developing%20Data%20Products/Week%202/shiny/index.html#/slide-5
+ Shiny Presentation : http://rpubs.com/Sony111/109468
